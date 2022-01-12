@@ -1,37 +1,45 @@
+// pure functions: siempre tiene el mismo output
 function countToThousand() {
-    for (let i = 0; i <= 1000; i++) {
-        console.log(i)
-    }
+  for (let i = 0; i <= 1000; i++) {
+    console.log(i)
+  }
 }
 
-countToThousand();
+// countToThousand()
 
-const anon = function () {
-    console.log("no tengo nombre")
-}
-
-anon();
-
-
-const tail = {
-    number: 'ZS-ZWG',
-    arrival: '10:53:00',
-    status: 'ON TIME',
-    climbLandingGear: function() {
-        console.log("subiendo tren de aterrizaje")
-    }
-}
-
-tail.climbLandingGear();
-
-//IIFE
-
+// function expression
+// IIFE
 (function() {
-    console.log("soy una funcion")
-    // do more suff
-})();
+  console.log("soy anonima")
+})()
+
+// sdasdasdgdfjghjkj()
+
+function creaTuFunction() { //outer function
+  let nombre = "lalo"
+  return function() { // inner function
+    nombre = "juan"
+    console.log("soy aninoma x2")
+  }
+  // more
+}
+
+// creaTuFunction()();
+
+// const anon2 = creaTuFunction();
+// anon2()
 
 (function(arg) {
-    console.log("soy una funcion con un argumento" + arg)
-    // do more suff
-})(arg);
+  console.log("soy una funcion con argumento " + arg)
+  // do more stuff
+})("Hola")
+
+const nombre = "lalo"
+
+function scope() {
+  const numero = 2
+  console.log(numero, nombre)
+}
+
+scope()
+// console.log(numero)

@@ -1,13 +1,18 @@
-function hi (nombre) {
-  const concat = "Hola, " + nombre
+
+function hi(nombre) {
   return function (greeting) {
-    return concat + ". " + greeting
+    return `Hola, ${nombre}. ${greeting}`
   }
 }
 
-const hiLalo = hi("Lalo")
+// Hola, Lalo. Buenas tardes
 
-console.log(hiLalo("Buenas tardes!"))
+const hiLalo = hi("Lalo") // gargabe collector no entra
+
+const greeting = hiLalo("Buenas tardes")
+
+console.log(greeting) // gargabe collector entra
+
 
 // Ejemplo
 // Tenemos un avion que quiere enviar un mensaje a tierra
@@ -16,12 +21,33 @@ console.log(hiLalo("Buenas tardes!"))
 // que los pilotos puedan cambiar el topico, este debe de quedar fijo.
 // Crear una funcion que permita al piloto enviar cualquier mensaje
 // sin darle posibilidad de cambiar el topic
-function send(topic, msg) {
-  console.log("enviando mensaje " +  msg + " al topic: " + topic)
+
+// function send(topic, msg) {
+//   console.log("enviando mensaje " +  msg + " al topic: " + topic + "-mx")
+// }
+
+// function pub(msg) {
+//   const topic = "/topic"
+//   send(topic, msg)
+// }
+
+// pub("Hola")
+
+const user = {
+  name: 'Eduardo Velazquez',
+  nickname: 'lalomx',
+  job: 'Fulstack Developer',
+  location: 'Mexico'
 }
 
-function pub(msg) {
-  send("/topic", msg)
-}
+const html = `
+  <div class="user">
+    <h2>
+        ${user.name}
+    </h2>
+    <p class="nickname">${user.nickname}</p>
+    <p class="location">${user.location}</p>
+  </div>
+`
 
-pub("Hola")
+console.log(html)

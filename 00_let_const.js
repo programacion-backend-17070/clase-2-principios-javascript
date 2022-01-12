@@ -1,67 +1,43 @@
-let aircraft = 'ZS-ZWG'
-let landed = true
+// let aircraft = "ZS-ZWG"
+// let landed = true
 
-if (landed) {
-    let airport = 'CPT'
-    console.log(aircraft)
-    console.log(airport)
-}
+// if (landed) {
+//   let airport = "CPT"
+//   console.log(airport)
+//   console.log(aircraft)
+// }
+// // console.log(airport)
 
-let airport = 'DUR'
-landed = false
 
-console.log(landed)
-console.log(airport)
-
-// no redeclarar
-
-// let airport = 'MEX'
-
-// CONST
 const speed = 920
 const height = 10900
 
 if (speed < 1235) {
-    console.log("no es supersonico")
-    const speed = 800
-    const state = "off"
-
-    console.log(state)
-    console.log(speed)
+  console.log("no es supersonico")
+  // speed = 700
+  const speed2 = 100
+  // console.log(speed)
 }
 
-{
-    const state = "on"
-    const speed = 0
+let height2 = height
 
-    if (speed === 0) {
-        const state = "in"
-    }
+height2 = 9000
 
-    console.log(state)
-    console.log("un bloque")
-}
 
-console.log(speed)
-
-let speed2 = speed
-
-speed2 += 50
-
-console.log(speed2)
-console.log(speed)
+// console.log(height, height2)
 
 const tail = {
-    number: 'ZS-ZWG',
-    arrival: '10:53:00',
-    status: 'ON TIME'
+  number: 'ZS-ZWG',
+  arrival: '10:53:00',
+  status: 'ON TIME'
 }
 
-// tail = {} NO ES POSIBLE
+// tail = {}
 
-tail.arrival = '11:30:00';
-tail.status = 'DELAYED';
-
-console.log(tail)
+tail.status = "DEALYED"
 
 const tail2 = tail
+
+tail2.arrival = "12:53:00"
+
+console.log(tail2, tail)
