@@ -3,12 +3,12 @@ function hi(nombre) {
   console.log("ejecutando hi")
 
 
-  const apellido = nombre + "";
-  console.log(apellido)
-  // SVGFEDropShadowElement+
-  // WebGLRenderbuffersdfasdf
-  // asdf
-  // asdfadfadedfaf
+  // const apellido = nombre + "";
+  // console.log(apellido)
+  // // SVGFEDropShadowElement+
+  // // WebGLRenderbuffersdfasdf
+  // // asdf
+  // // asdfadfadedfaf
   return function (greeting) {
     console.log("ejecutando function anonima")
     return `Hola, ${nombre}. ${greeting}`
@@ -18,10 +18,10 @@ function hi(nombre) {
 // Hola, Lalo. Buenas tardes
 
 const hiLalo = hi("Lalo") // gargabe collector no entra
-// console.log(hiLalo)
+console.log(hiLalo)
 const greeting = hiLalo("Buenas tardes") // gargabe collector entra
 
-// console.log(greeting) 
+console.log(greeting) 
 
 
 // Ejemplo
@@ -61,3 +61,5 @@ const greeting = hiLalo("Buenas tardes") // gargabe collector entra
 // `
 
 // console.log(html)
+
+nombre: String
