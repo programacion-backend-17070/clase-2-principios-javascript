@@ -1,6 +1,16 @@
 
 function hi(nombre) {
+  console.log("ejecutando hi")
+
+
+  const apellido = nombre + "";
+  console.log(apellido)
+  // SVGFEDropShadowElement+
+  // WebGLRenderbuffersdfasdf
+  // asdf
+  // asdfadfadedfaf
   return function (greeting) {
+    console.log("ejecutando function anonima")
     return `Hola, ${nombre}. ${greeting}`
   }
 }
@@ -8,10 +18,10 @@ function hi(nombre) {
 // Hola, Lalo. Buenas tardes
 
 const hiLalo = hi("Lalo") // gargabe collector no entra
+// console.log(hiLalo)
+const greeting = hiLalo("Buenas tardes") // gargabe collector entra
 
-const greeting = hiLalo("Buenas tardes")
-
-console.log(greeting) // gargabe collector entra
+// console.log(greeting) 
 
 
 // Ejemplo
@@ -33,21 +43,21 @@ console.log(greeting) // gargabe collector entra
 
 // pub("Hola")
 
-const user = {
-  name: 'Eduardo Velazquez',
-  nickname: 'lalomx',
-  job: 'Fulstack Developer',
-  location: 'Mexico'
-}
+// const user = {
+//   name: 'Eduardo Velazquez',
+//   nickname: 'lalomx',
+//   job: 'Fulstack Developer',
+//   location: 'Mexico'
+// }
 
-const html = `
-  <div class="user">
-    <h2>
-        ${user.name}
-    </h2>
-    <p class="nickname">${user.nickname}</p>
-    <p class="location">${user.location}</p>
-  </div>
-`
+// const html = `
+//   <div class="user">
+//     <h2>
+//         ${user.name}
+//     </h2>
+//     <p class="nickname">${user.nickname}</p>
+//     <p class="location">${user.location}</p>
+//   </div>
+// `
 
-console.log(html)
+// console.log(html)
